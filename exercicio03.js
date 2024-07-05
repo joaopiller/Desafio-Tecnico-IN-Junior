@@ -4,14 +4,14 @@ média aritmética dessas notas for maior ou igual que 6 imprima
 
 function situacao(mediaAluno) {
     if (mediaAluno >= 6) {
-        return 'Aprovado'
+        return 'Aprovado';
     }
-    return "Reprovado"
+    return "Reprovado";
 }
-var nota1 = Number(prompt('Insira a primeira nota: '))
-var nota2 = Number(prompt('Insira a segunda nota: '))
-var nota3 = Number(prompt('Insira a terceira nota: '))
+var nota1 = Number(prompt('Insira a primeira nota: '));
+var nota2 = Number(prompt('Insira a segunda nota: '));
+var nota3 = Number(prompt('Insira a terceira nota: '));
 
-var media = (nota1 + nota2 + nota3) / 3
+var media = (nota1 + nota2 + nota3) / 3;
 
-console.log(situacao(media))
+console.log(situacao(media));
