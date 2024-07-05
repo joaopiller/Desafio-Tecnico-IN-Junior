@@ -1,4 +1,5 @@
 // Contar o número de autores
+
 const booksByCategory = [
     {
         category: "Riqueza",
@@ -35,3 +36,19 @@ const booksByCategory = [
         ],
     },
 ];
+
+function numeroDeAutores(booksByCategory) {
+    var numeroDeAutores = 0;
+    for (i = 0; i < booksByCategory.length; i++) {
+        numeroDeAutores = numeroDeAutores + booksByCategory[i].books.length;
+        for (j = 0; j < booksByCategory[i].books.length; j++){
+            if (booksByCategory[i].books[j].author.includes(' e ')) {
+                numeroDeAutores = numeroDeAutores + 1;
+            }
+        }
+    }
+    return numeroDeAutores;
+}
+
+var numeroDeAutores = numeroDeAutores(booksByCategory);
+console.log('Numero de autores = ' + numeroDeAutores);

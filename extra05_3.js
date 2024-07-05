@@ -1,4 +1,4 @@
-//Contar o número de categorias e o número de livros em cada categoria
+// Mostrar os livros do autor Augusto Cury
 
 const booksByCategory = [
     {
@@ -37,19 +37,15 @@ const booksByCategory = [
     },
 ];
 
-function obterNumeroDeCategorias(booksByCategory) {
-    var numeroDeCategorias = booksByCategory.length;
-    return numeroDeCategorias;
-}
-
-function numeroDeLivrosPorCategoria(booksByCategory) {
-    for (let i = 0; i < booksByCategory.length; i++) {
-        const categoria = booksByCategory[i].category;
-        const numeroDeLivros = booksByCategory[i].books.length;
-        console.log(categoria + ': ' + numeroDeLivros + ' livros.');
+function livrosDeAugustoCury(booksByCategory) {
+    console.log('Obras de Augusto Cury:');
+    for (var i = 0; i < booksByCategory.length; i++) {
+        for (var j = 0; j < booksByCategory[i].books.length; j++){
+            if (booksByCategory[i].books[j].author == 'Augusto Cury') {
+                console.log(booksByCategory[i].books[j].title);
+            }
+        }
     }
 }
 
-var totalDeCategorias = obterNumeroDeCategorias(booksByCategory);
-console.log('Número de categorias: ' + totalDeCategorias);
-numeroDeLivrosPorCategoria(booksByCategory);
+livrosDeAugustoCury(booksByCategory)
